@@ -1,0 +1,54 @@
+{
+    "sidebar": {
+      "Dashboard": "Dashboard",
+      "Room": "Habitaciones",
+      "Bookings": "Reservas",
+      "Guest": "Clientes",
+      "Concierge": "Empleados",
+      "Contact Us": "Contactanos"
+    },
+    "titles": {
+      "dashboard": "Dashboard",
+      "bookings": "Reservas",
+      "rooms": "Lista de Habitaciones",
+      "users": "Lista de Clientes",
+      "contact": "Lista de Empleados"
+    },
+    "dashboard": {
+      "New Bookings": "Nuevas Reservas",
+      "Scheduled Room": "Habitacions Reservadas",
+      "Check In": "Check In",
+      "Check Out": "Check Out"
+    },
+    "users": {
+      "All Guests": "Todos los Clientes",
+      "Pending": "Pendiente",
+      "Booked": "Reservado",
+      "Canceled": "Cancelado",
+      "Refund": "reembolso",
+      "Newest": "Más Reciente",
+      "01 November 2025 - 30 November 2025": "01 Noviembre 2025 - 30 Noviembre 2025",
+      "Guest": "Cliente",
+      "Order Date": "Fecha Reserva",
+      "Check In": "Check In",
+      "Check Out": "Check Out",
+      "Special Request": "Petición Especial",
+      "Room Type": "Tipo Habitación",
+      "Status": "Estado",
+      "View Notes": "Ver Notas"
+    },
+    "rooms": {
+      "All Rooms": "Todas las Habitacones",
+      "Room Name": "Nombre Habitación",
+      "Bed Type": "Tipo de Cama",
+      "Room Floor": "Planta",
+      "Facilities": "Servicios",
+      "Rate": "Valoración",
+      "Status": "Estado",
+      "Double Bed": "Cama Doble",
+      "Single Bed": "Cama Simple",
+      "Night": "Noche",
+      "Available": "Disponible",
+      "Booked": "Reservada"
+    }
+  }

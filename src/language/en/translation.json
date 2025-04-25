@@ -1,0 +1,54 @@
+{
+    "sidebar": {
+      "Dashboard": "Dashboard",
+      "Room": "Room",
+      "Bookings": "Bookings",
+      "Guest": "Guest",
+      "Concierge": "Concierge",
+      "Contact Us": "Contact Us"
+    },
+    "titles": {
+      "dashboard": "Dashboard",
+      "rooms": "Room List",
+      "bookings": "Bookings",
+      "users": "Guest List",
+      "contact": "Concierge List"
+    },
+    "dashboard": {
+      "New Bookings": "New Bookings",
+      "Scheduled Room": "Scheduled Room",
+      "Check In": "Check In",
+      "Check Out": "Check Out"
+    },
+    "users": {
+      "All Guests": "All Guests",
+      "Pending": "Pending",
+      "Booked": "Booked",
+      "Canceled": "Canceled",
+      "Refund": "Refund",
+      "Newest": "Newest",
+      "01 November 2025 - 30 November 2025": "01 November 2025 - 30 November 2025",
+      "Guest": "Guest",
+      "Order Date": "Order Date",
+      "Check In": "Check In",
+      "Check Out": "Check Out",
+      "Special Request": "Special Request",
+      "Room Type": "Room Type",
+      "Status": "Status",
+      "View Notes": "View Notes"
+    },
+    "rooms": {
+      "All Rooms": "All Rooms",
+      "Room Name": "Room Name",
+      "Bed Type": "Bed Type",
+      "Room Floor": "Room Floor",
+      "Facilities": "Facilities",
+      "Rate": "Rate",
+      "Status": "Status",
+      "Double Bed": "Double Bed",
+      "Single Bed": "Single Bed",
+      "Night": "Night",
+      "Available": "Available",
+      "Booked": "Booked"
+    }
+  }
