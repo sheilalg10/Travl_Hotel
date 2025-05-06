@@ -1,8 +1,6 @@
-import { useSelector } from "react-redux";
 import styled from "styled-components";
 
-export default function TableRooms() {
-  const rooms = useSelector((state) => state.rooms.data);
+export default function TableRooms({ rooms }) {
 
   return (
     <TableContainer>

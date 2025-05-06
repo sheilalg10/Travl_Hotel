@@ -18,8 +18,9 @@ const RoomsPage = () => {
   };
 
   const filteredRooms = rooms.filter((room) => {
+    const status = room.status?.toLowerCase();
     if (filter === "all") return true;
-    return room.status.toLowerCase() === filter;
+    return status === filter;
   });
 
   return (
