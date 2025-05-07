@@ -3,7 +3,7 @@
       "Dashboard": "Dashboard",
       "Room": "Room",
       "Bookings": "Bookings",
-      "Guest": "Guest",
+      "Users": "Users",
       "Concierge": "Concierge",
       "Contact Us": "Contact Us"
     },
@@ -11,7 +11,7 @@
       "dashboard": "Dashboard",
       "rooms": "Room List",
       "bookings": "Bookings",
-      "users": "Guest List",
+      "users": "Users List",
       "contact": "Concierge List"
     },
     "dashboard": {

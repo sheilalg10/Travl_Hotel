@@ -1,6 +1,11 @@
 import styled from "styled-components";
+import { FaSort, FaSortUp, FaSortDown } from "react-icons/fa";
 
-export default function TableRooms({ rooms }) {
+export default function TableRooms({ rooms, onSort, sortConfig }) {
+  const getSortIcon = (key) => {
+    if (sortConfig.key !== key) return <FaSort />;
+    return sortConfig.direction === "asc" ? <FaSortUp /> : <FaSortDown />;
+  };
 
   return (
     <TableContainer>
@@ -11,8 +16,12 @@ export default function TableRooms({ rooms }) {
             <Th>Bed Type</Th>
             <Th>Floor</Th>
             <Th>Facilities</Th>
-            <Th>Rate</Th>
-            <Th>Status</Th>
+            <Th onClick={() => onSort("rate")} style={{ cursor: "pointer" }}>
+              Rate {getSortIcon("rate")}
+            </Th>
+            <Th onClick={() => onSort("status")} style={{ cursor: "pointer" }}>
+              Status {getSortIcon("status")}
+            </Th>
           </tr>
         </thead>
         <tbody>
@@ -67,6 +76,7 @@ const Th = styled.th`
   text-align: left;
   font-weight: bold;
   border-bottom: 1px solid #ddd;
+  user-select: none;
 `;
 
 const Td = styled.td`
