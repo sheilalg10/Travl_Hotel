@@ -4,8 +4,8 @@
       "Room": "Room",
       "Bookings": "Bookings",
       "Users": "Users",
-      "Concierge": "Concierge",
-      "Contact Us": "Contact Us"
+      "Contact": "Contact",
+      "Edit": "Edit"
     },
     "titles": {
       "dashboard": "Dashboard",

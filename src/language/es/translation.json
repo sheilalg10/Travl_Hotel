@@ -4,8 +4,8 @@
       "Room": "Habitaciones",
       "Bookings": "Reservas",
       "Users": "Usuarios",
-      "Concierge": "Empleados",
-      "Contact Us": "Contactanos"
+      "Contact": "Contacto",
+      "Edit": "Editar"
     },
     "titles": {
       "dashboard": "Dashboard",

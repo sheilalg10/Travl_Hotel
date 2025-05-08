@@ -20,7 +20,7 @@ export default function SidebarList() {
       { icon: <IoKeyOutline className="icos" />, label: t("sidebar.Room"), path: "/dashboard/rooms" },
       { icon: <CiCalendarDate className="icos" />, label: t("sidebar.Bookings"), path: "/dashboard/bookings" },
       { icon: <FaUser className="icos" />, label: t("sidebar.Users"), path: "/dashboard/users" },
-      { icon: <IoExtensionPuzzleOutline className="icos" />, label: t("sidebar.Concierge"), path: "/dashboard/contact" },
+      { icon: <IoExtensionPuzzleOutline className="icos" />, label: t("sidebar.Contact"), path: "/dashboard/contact" },
     ];
 
     const handleClick = (index, path) => {

@@ -1,22 +1,25 @@
-import styled from 'styled-components';
+import React, { useState } from "react";
+import { useSelector } from "react-redux";
+import HeaderTabs from "../components/employees/headerTabs";
+import TableEmployees from "./../components/employees/tableEmployees";
 
-export default function User() {
-    
-    return (
-        <StyledUser>
-            <h3>Clients</h3>
-        </ StyledUser>
-    )
-}
+const EmployeesPage = () => {
+  const [filter, setFilter] = useState("all");
 
-const StyledUser= styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    width: 80vw;
-    margin-left: 20vw;
-    overflow-y: scroll;
-    position: relative;
-    gap: 2rem;
-`;
+  const employees = useSelector((state) => state.employees.data);
+
+  const filteredemployees = employees.filter((employee) => {
+    const status = employee.status?.toLowerCase();
+    if (filter === "all") return true;
+    return status === filter;
+  });
+
+  return (
+    <>
+      <HeaderTabs activeTab={filter} onChangeTab={setFilter} />
+      <TableEmployees employees ={filteredemployees} />
+    </>
+  );
+};
+
+export default EmployeesPage;
