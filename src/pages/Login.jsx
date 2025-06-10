@@ -82,6 +82,7 @@ const FormContainer = styled.div`
     margin-bottom: 1.5rem;
     font-size: 2rem;
     color: #333;
+    font-family: poppins;
   }
 `;
 
