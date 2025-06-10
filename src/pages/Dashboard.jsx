@@ -18,5 +18,5 @@ const StyledDashboard = styled.div`
     width: 80vw;
     margin-left: 20vw;
     position: relative;
-    padding: 2rem;
+    padding: 1.5rem;
 `;
