@@ -20,7 +20,7 @@ const StyledSidebar = styled.div`
     justify-content: flex-start;
     position: absolute;
     flex-direction: column;
-    padding: 2rem;
+    padding: 3rem;
     left: 0;
     top: 0;
     width: 16vw;

@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { Provider } from 'react-redux';
+import { Provider } from "react-redux";
 
 import "./styles/index.css";
 
@@ -10,13 +10,15 @@ import Dashboard from "./pages/Dashboard";
 import Layout from "./layout/Layout";
 import Bookings from "./pages/Bookings";
 import Users from "./pages/Users";
-import Contact from "./pages/Contact";
+import Employees from "./pages/Employees";
 import Rooms from "./pages/Rooms";
+import UsersDetails from './pages/UserDetails';
 
-import ProtectedRoute from "./routes/protectedRoute";
+import ProtectedRoute from "./routes/ProtectedRoute";
 import { LoginProvider } from "./context/loginContext";
 import { LanguageProvider } from "./context/languageContext";
-import store from './redux/store';
+import store from "./redux/store";
+import { ThemeProvider } from "./context/themeContext";
 
 const router = createBrowserRouter([
   { path: "/", element: <Login /> },
@@ -45,6 +47,14 @@ const router = createBrowserRouter([
         ),
       },
       {
+        path: "bookings/:id",
+        element: (
+          <ProtectedRoute>
+            <UsersDetails />
+          </ProtectedRoute>
+        ),
+      },
+      {
         path: "rooms",
         element: (
           <ProtectedRoute>
@@ -64,7 +74,7 @@ const router = createBrowserRouter([
         path: "contact",
         element: (
           <ProtectedRoute>
-            <Contact />
+            <Employees />
           </ProtectedRoute>
         ),
       },
@@ -74,6 +84,7 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+    <ThemeProvider>
     <LoginProvider>
       <LanguageProvider>
         <Provider store={store}>
@@ -81,5 +92,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         </Provider>
       </LanguageProvider>
     </LoginProvider>
+    </ThemeProvider>
   </React.StrictMode>
 );

@@ -1,30 +1,32 @@
-import React, { useState } from "react";
-import { useSelector } from "react-redux";
-import HeaderTabs from "../components/employees/headerTabs";
-import TableEmployees from "./../components/employees/tableEmployees";
-import styled from "styled-components";
+import styled from 'styled-components';
+import { useState } from 'react';
+import TableActions from '../components/common/tableActions';
+import TableTemplate from '../components/common/tableTemplate'
 
-const EmployeesPage = () => {
-  const [filter, setFilter] = useState("all");
+export default function Users() {
 
-  const employees = useSelector((state) => state.employees.data);
+    const [filter, setFilter] = useState("");
 
-  const filteredemployees = employees.filter((employee) => {
-    const status = employee.status?.toLowerCase();
-    if (filter === "all") return true;
-    return status === filter;
-  });
+    const handleFilter = (filter) => {
+        setFilter(filter);
+    };
 
-  return (
-    <StyledUsers>
-      <HeaderTabs activeTab={filter} onChangeTab={setFilter} />
-      <TableEmployees employees ={filteredemployees} />
-    </StyledUsers>
-  );
-};
+    return (
+        <StyledUsers>
+            <TableActions onFilter={handleFilter} />
+            <TableTemplate filter={filter} />
+        </ StyledUsers>
+    )
+}
 
 const StyledUsers = styled.div`
-  overflow-y: scroll;
+    display: flex;
+    flex-direction: column;  
+    justify-content: flex-start;
+    width: 84vw;
+    margin-left: 16vw;
+    overflow-y: scroll;
+    position: relative;
+    gap: 2rem;
+    height: 80vh;
 `;
-
-export default EmployeesPage;

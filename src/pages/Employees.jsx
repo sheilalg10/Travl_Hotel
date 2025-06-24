@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import { useState } from 'react';
 import TableActions from '../components/common/tableActions';
-import TableTemplate from '../components/common/tableTemplate'
-import FormRoom from '../components/rooms/FormRoom';
+import TableTemplate from '../components/common/tableTemplate';
+import FormEmployees from '../components/employees/FormEmployees';
 
-export default function Rooms() {
-
+export default function Contact() {
+    
     const [formActive, setFormActive] = useState(false);
     const [filter, setFilter] = useState("");
     
@@ -18,15 +18,15 @@ export default function Rooms() {
     };
     
     return (
-        <StyledRooms>
-            <TableActions onAddClick={handleAddClick} onFilter={handleFilter} />
+        <StyledContact>
+            <TableActions onAddClick={handleAddClick} onFilter={handleFilter}  />
             <TableTemplate filter={filter} />
-            {formActive && <FormRoom onClose={() => setFormActive(false)} />}
-        </ StyledRooms>
+            {formActive && <FormEmployees onClose={() => setFormActive(false)} />}
+        </ StyledContact>
     )
 }
 
-const StyledRooms = styled.div`
+const StyledContact = styled.div`
     display: flex;
     flex-direction: column;  
     justify-content: flex-start;
