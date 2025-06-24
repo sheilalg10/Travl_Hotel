@@ -13,6 +13,8 @@
   "dependencies": {
     "@hello-pangea/dnd": "^18.0.1",
     "@reduxjs/toolkit": "^2.7.0",
+    "@types/axios": "^0.9.36",
+    "axios": "^1.10.0",
     "i18next": "^25.0.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
