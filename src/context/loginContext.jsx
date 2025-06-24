@@ -1,34 +1,51 @@
-import { createContext, useState, useContext, useEffect } from 'react';
+import { createContext, useReducer, useContext, useEffect } from "react";
+import { initialState, loginReducer } from "./../reducer/loginReducer";
 
 const LoginContext = createContext();
 
 export function LoginProvider({ children }) {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [state, dispatch] = useReducer(loginReducer, initialState);
 
   useEffect(() => {
-    const storedLogin = localStorage.getItem('isLogged') === 'true';
-    setIsAuthenticated(storedLogin);
+    const storedLogin = localStorage.getItem("isLogged") === "true";
+    dispatch({ type: "INIT", payload: storedLogin });
   }, []);
 
-  const login = (username, password) => {
-    const user = { username: 'admin', password: 'admin' };
-  
-    if (username === user.username && password === user.password) {
-      localStorage.setItem('isLogged', 'true');
-      setIsAuthenticated(true);
+  const login = async (username, password) => {
+    try {
+      const response = await fetch("http://localhost:3000/api/login", {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify({ username, password }),
+      });
+
+      if (!response.ok) {
+        return false;
+      }
+
+      const data = await response.json();
+
+      localStorage.setItem("token", data.token);
+      localStorage.setItem("isLogged", "true");
+
+      dispatch({ type: "LOGIN" });
       return true;
-    } else {
+    } catch (error) {
+      console.log("Login failed:", error);
       return false;
     }
   };
 
   const logout = () => {
+    localStorage.removeItem('token');
     localStorage.removeItem('isLogged');
-    setIsAuthenticated(false);
+    dispatch({ type: 'LOGOUT' });
   };
 
   return (
-    <LoginContext.Provider value={{ isAuthenticated, login, logout }}>
+    <LoginContext.Provider value={{ isAuthenticated: state.isAuthenticated, login, logout }}>
       {children}
     </LoginContext.Provider>
   );
