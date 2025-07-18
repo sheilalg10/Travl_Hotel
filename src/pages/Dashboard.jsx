@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { useState } from 'react';
-import Cards from '../components/dashboard/Cards';
+import Cards from '../components/dashboard/Cards.jsx';
 import Calendar from '../components/dashboard/Calendar';
 import ListBooking from '../components/dashboard/ListBooking';
 
