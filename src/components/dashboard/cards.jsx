@@ -5,7 +5,7 @@ import { CiCalendarDate } from "react-icons/ci";
 import { LuArrowLeftToLine } from "react-icons/lu";
 import { LuArrowRightToLine } from "react-icons/lu";
 
-export default function CardsDashboard() {
+export default function Cards() {
 
     const { t } = useTranslation();
 
