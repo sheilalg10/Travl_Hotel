@@ -1,7 +1,7 @@
 import Logo from "./sideBar/Logo";
 import styled from 'styled-components';
 import SidebarList from "./sideBar/SidebarList";
-import Card from "./sideBar/card";
+import Card from "./sideBar/Card";
 import Copyright from "./sideBar/Copyright";
 
 export default function Sidebar() {
